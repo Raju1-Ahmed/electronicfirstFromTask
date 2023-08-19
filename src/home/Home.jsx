@@ -54,7 +54,7 @@ const Home = () => {
         const closeBtn = document.getElementById('close');
         searchButton.addEventListener('click', function () {
             tabWrap.style.display = 'none';
-            searchBar.style.display = 'block';
+            searchBar.style.display = 'flex';
         });
         closeBtn.addEventListener('click', function () {
             searchBar.style.display = 'none';
@@ -134,8 +134,8 @@ const Home = () => {
             </div>
             {/* search-bar*/}
             <div className="search-bar" id='searchBar'>
-                <input type="text" placeholder="Minecraft, RPG, Multiplayer..." />
-                <button className='advanceButton'>Advance Search</button>
+               <span> <input type="text" placeholder="Minecraft, RPG, Multiplayer..." /></span>
+               <span className='advanceButton'> <a>Advance Search</a></span>
                 <span className="close" id="close">
                     <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/delete-sign.png" alt="delete-sign" />
                 </span>

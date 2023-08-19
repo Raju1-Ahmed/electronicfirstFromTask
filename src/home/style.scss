@@ -1,12 +1,17 @@
 body {
-  height: auto;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  
 }
 
+// https://i.ibb.co/4Jyvqqf/images-3.jpg
 .menu-wrap {
   position: relative;
+  width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #fe690a;
 }
 
 .navbar {
@@ -16,11 +21,11 @@ body {
   // background-color: rgba(0, 0, 0, 0.6);
   // padding: 10px 20px;
   color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
   width: 100%;
-  z-index: 2;
+  // z-index: 2;
 }
 
 .navbar-middle {
@@ -30,6 +35,7 @@ body {
   @media screen and (max-width: 575.98px) {
     display: none; // Hide the dropdown on medium and smaller devices
   }
+
   @media screen and (min-width: 576px) and (max-width: 767.98px) {
     display: none; // Hide the dropdown on medium and smaller devices
   }
@@ -124,20 +130,16 @@ body {
 
 .Tab-wrap {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-top: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(21 31 40);
-  border-radius: 85px;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  width: 600px;
-  transform: translateX(-50%);
-  z-index: 2;
+    padding: 0;
+    margin: 0 auto;
+    /* margin-top: 120px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(21, 31, 40);
+    border-radius: 85px;
+    /* position: fixed; */
+    width: 600px;
 
   ul {
     display: flex;
@@ -194,7 +196,7 @@ body {
     border-radius: 0px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
+
     // padding: 20px;
     background-color: navy;
 
@@ -233,15 +235,10 @@ body {
 
 
 .search-bar {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  margin-top: 120px;
+  // margin: 0 auto;
   display: none;
-  align-items: center;
   justify-content: center;
-  transform: translateX(-50%);
-  z-index: 2;
+    align-items: center;
 
   .inputWrap {
     display: flex;
@@ -259,12 +256,8 @@ body {
   }
 
   .advanceButton {
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    right: -9%;
-    transform: translateX(-50%);
+  
+
   }
 
   .advanceButton:hover {
@@ -293,20 +286,21 @@ body {
 
 .platforms {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-top: 25px;
+  padding: 1px;
+  box-shadow: darkslategray;
+  margin: 0 auto;
+  margin-top: 5px;
   align-items: center;
   justify-content: center;
   background-color: #4a6166;
-  border-radius: 20px;
-  position: fixed;
-  top: 29%;
-  left: 50%;
-  width: 700px;
-  transform: translateX(-50%);
-  z-index: 2;
-  // display: none;
+  border-radius: 11px;
+  /* position: fixed; */
+  /* top: 29%; */
+  /* left: 50%; */
+  width: 600px;
+  /* transform: translateX(-50%); */
+  /* z-index: 2; */
+
 
   /* Extra small devices (phones) */
   @media screen and (max-width: 575.98px) {
@@ -392,4 +386,81 @@ body {
 
 .tab-content.active {
   display: block;
+}
+
+
+.container {
+
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+
+  .trending {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .trending-heading {
+      margin: 0;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  }
+
+  .TrendingProducts {
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 20px;
+
+    .SingleTrending {
+    width: 350px;
+    padding: 16px;
+
+
+      .TrendingImage {
+        position: relative;
+        // width: 100px;
+        // height: 100px;
+        overflow: hidden;
+        border-radius: 7px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        span {
+          position: absolute;
+          bottom: 7px;
+          left: -6px;
+          background-color: rgba(255, 0, 0, 0.7);
+          color: white;
+          padding: 5px 10px;
+          border-radius: 0 5px 0 0;
+          transform: skew(20deg);
+        }
+      }
+
+      .TrendingDetail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .TrendingName {
+          font-family: serif;
+          font-weight: 100;
+          font-size: 20px;
+
+        }
+
+        .price {
+          margin-top: auto;
+        }
+      }
+    }
+  }
 }
