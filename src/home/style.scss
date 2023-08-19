@@ -122,8 +122,6 @@ body {
 }
 
 
-
-
 .Tab-wrap {
   list-style: none;
   padding: 0;
@@ -176,7 +174,6 @@ body {
         color: #22C3E6;
       }
     }
-
   }
 
   .search {
@@ -190,7 +187,50 @@ body {
     width: 56px;
     height: 56px;
   }
+
+  /* Extra small devices (phones) */
+  @media screen and (max-width: 575.98px) {
+    width: 100%;
+    border-radius: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    // padding: 20px;
+    background-color: navy;
+
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .tab {
+        margin-bottom: 10px;
+      }
+    }
+
+    #searchButton {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+
+  /* Small devices (tablets) */
+  @media screen and (min-width: 576px) and (max-width: 767.98px) {
+    width: 70%;
+  }
+
+  /* Medium devices (landscape tablets and small laptops) */
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    /* Add any specific styles for medium devices here */
+  }
+
+  /* Large devices (laptops and desktops) */
+  @media screen and (min-width: 992px) {
+    /* Add any specific styles for large devices here */
+  }
 }
+
 
 .search-bar {
   position: fixed;
@@ -268,6 +308,41 @@ body {
   z-index: 2;
   // display: none;
 
+  /* Extra small devices (phones) */
+  @media screen and (max-width: 575.98px) {
+    width: 100%;
+    top: 33%;
+    padding: 10px;
+
+    .view {
+      padding: 10px;
+    }
+
+    .products {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+
+    .product {
+      justify-content: center;
+    }
+  }
+
+  /* Small devices (tablets) */
+  @media screen and (min-width: 576px) and (max-width: 767.98px) {
+    width: 80%;
+  }
+
+  /* Medium devices (landscape tablets and small laptops) */
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    /* Add any specific styles for medium devices here */
+  }
+
+  /* Large devices (laptops and desktops) */
+  @media screen and (min-width: 992px) {
+    /* Add any specific styles for large devices here */
+  }
+
   .view {
     margin-top: 16px;
     margin-left: 10px;
@@ -309,6 +384,7 @@ body {
     border-radius: 100%;
   }
 }
+
 
 .tab-content {
   display: none;
