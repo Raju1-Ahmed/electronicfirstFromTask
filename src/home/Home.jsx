@@ -2,8 +2,32 @@
 import { useEffect } from 'react';
 import './style.scss'
 
-const Home = () => {    
+const Home = () => {
+
+
     useEffect(() => {
+    // JavaScript (script.js)
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownBtn = document.querySelector(".dropbtn");
+    const dropdownContent = document.querySelector(".dropdown-content");
+  
+    dropdownBtn.addEventListener("click", function () {
+      dropdownContent.classList.toggle("show");
+    });
+  
+    // Close the dropdown when clicking outside of it
+    window.addEventListener("click", function (event) {
+      if (!event.target.matches(".dropbtn")) {
+        if (dropdownContent.classList.contains("show")) {
+          dropdownContent.classList.remove("show");
+        }
+      }
+    });
+  });
+  
+
+
         const tabs = document.querySelectorAll('.tab');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -11,7 +35,7 @@ const Home = () => {
             tab.addEventListener('click', () => {
                 const tabId = tab.getAttribute('data-tab');
                 const selectedTabContent = document.querySelector(`.tab-content[data-tab="${tabId}"]`);
-                
+
                 tabs.forEach(t => {
                     t.classList.remove('active');
                 });
@@ -26,8 +50,8 @@ const Home = () => {
                 });
             });
         });
-      
-     
+
+
         // Here's a vanilla Javascript implementation for the search button
         const searchButton = document.getElementById('searchButton');
         const searchBar = document.getElementById('searchBar');
@@ -59,6 +83,18 @@ const Home = () => {
                     <button>Upcoming</button>
                     <button>Support24/7</button>
                 </div>
+                <div className="dropdown">
+                    <button className="dropbtn">
+                    <img width="30" height="30" src="https://img.icons8.com/ios/50/menu--v1.png" alt="menu--v1"/>
+                        
+                    </button>
+                    <div className="dropdown-content">
+                        <a href="#">Item 1</a>
+                        <a href="#">Item 2</a>
+                        <a href="#">Item 3</a>
+                    </div>
+                </div>
+
                 <div className="navbar-right">
                     <a href="">
                         <img width="50" height="20" src="https://img.icons8.com/dotty/80/FFFFFF/shopping-cart.png" alt="shopping-cart" />
@@ -70,6 +106,7 @@ const Home = () => {
 
                 </div>
             </nav>
+
             <div className="Tab-wrap" id='tabWrap'>
                 <ul>
                     <li className="tab " data-tab="tab1">
@@ -149,7 +186,7 @@ const Home = () => {
                 <div className="platforms tab-content " data-tab="tab4">This is four tab</div>
             </div>
 
-            
+
         </div>
     );
 };
