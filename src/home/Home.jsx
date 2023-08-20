@@ -134,8 +134,10 @@ const Home = () => {
             </div>
             {/* search-bar*/}
             <div className="search-bar" id='searchBar'>
-               <span> <input type="text" placeholder="Minecraft, RPG, Multiplayer..." /></span>
-               <span className='advanceButton'> <a>Advance Search</a></span>
+                <div className='searchInput'>
+                    <input type="text" placeholder="Minecraft, RPG, Multiplayer..." />
+                    <span className='searchButton'> <a href="">Advance Search</a></span>
+                </div>
                 <span className="close" id="close">
                     <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/delete-sign.png" alt="delete-sign" />
                 </span>
@@ -151,29 +153,36 @@ const Home = () => {
                     <div className='products'>
                         <div className='product'>
                             <span className='imageShape'>
-                                <img width="30" height="30" src="https://img.icons8.com/color/48/youtube-live.png" alt="youtube-live" />
+                            <img width="30" height="30" src="https://img.icons8.com/bubbles/50/epic-games.png" alt="epic-games"/>
                             </span>
                             <h3>Steam</h3>
                         </div>
 
                         <div className='product'>
-                            <img width="30" height="30" src="https://img.icons8.com/color/48/youtube-live.png" alt="youtube-live" />
-                            <h3>Steam</h3>
+                            <span className='imageShape imageShapeBackgroundTow'>
+                                <img width="30" height="30" src="https://img.icons8.com/nolan/64/ubisoft.png" alt="ubisoft" />
+                            </span>
+                            <h3>Ubisoft Connect</h3>
                         </div>
 
                         <div className='product'>
-                            <img width="30" height="30" src="https://img.icons8.com/color/48/youtube-live.png" alt="youtube-live" />
-                            <h3>Steam</h3>
+                            <span className='imageShape imageShapeBackgroundThree'>
+                                <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/apple-app-store--v2.png" alt="apple-app-store--v2" />
+                            </span>
+                            <h3>Ea App</h3>
                         </div>
 
                         <div className='product'>
-                            <img width="30" height="30" src="https://img.icons8.com/color/48/youtube-live.png" alt="youtube-live" />
-                            <h3>Steam</h3>
+                            <span className='imageShape imageShapeBackgroundFour'>
+                                <img width="30" height="30" src="https://img.icons8.com/color/48/net-framework.png" alt="net-framework" />
+                            </span>  <h3>Battle.Net</h3>
                         </div>
 
                         <div className='product'>
-                            <img width="30" height="30" src="https://img.icons8.com/color/48/youtube-live.png" alt="youtube-live" />
-                            <h3>Steam</h3>
+                            <span className='imageShape imageShapeBackgroundFive'>
+                                <img width="30" height="30" src="https://img.icons8.com/color/48/microsoft.png" alt="microsoft" />
+                            </span>
+                            <h3>Microsoft Store</h3>
                         </div>
                     </div>
                 </div>

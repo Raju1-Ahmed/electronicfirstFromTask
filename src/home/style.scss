@@ -2,16 +2,19 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  
+
 }
 
 // https://i.ibb.co/4Jyvqqf/images-3.jpg
 .menu-wrap {
-  position: relative;
   width: 1200px;
-  height: 400px;
+  height: 500px;
   margin: 0 auto;
-  background-color: #fe690a;
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgb(34 193 195 / 56%) 0%, rgb(253 187 45 / 24%) 100%);
 }
 
 .navbar {
@@ -24,9 +27,9 @@ body {
   // position: fixed;
   // top: 0;
   // left: 0;
-  width: 100%;
+  // width: 100%;
   // z-index: 2;
-}
+
 
 .navbar-middle {
   flex-grow: 1;
@@ -53,28 +56,9 @@ body {
     margin: 0 10px;
     cursor: pointer;
   }
+
 }
 
-.navbar-left,
-.navbar-right {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-right {
-  img {
-    width: 30px;
-    /* Adjust the width as needed */
-    height: auto;
-    margin: 0 15px;
-  }
-}
-
-.logo {
-  width: 120px;
-  /* Adjust the width of the logo as needed */
-  height: auto;
-}
 
 .dropdown {
   position: relative;
@@ -89,7 +73,6 @@ body {
   @media screen and (min-width: 992px) and (max-width: 1199.98px) {
     display: none; // Hide the dropdown on medium and smaller devices
   }
-}
 
 .dropbtn {
   background-color: #ffffff;
@@ -123,23 +106,50 @@ body {
   }
 }
 
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  img {
+    width: 30px;
+    /* Adjust the width as needed */
+    height: auto;
+    margin: 0 15px;
+  }
+}
+
+
+}
+
+
+
+
+.logo {
+  width: 120px;
+  /* Adjust the width of the logo as needed */
+  height: auto;
+}
+
+
 
 
 .Tab-wrap {
   list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    /* margin-top: 120px; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(21, 31, 40);
-    border-radius: 85px;
-    /* position: fixed; */
-    width: 600px;
+  padding: 0;
+  margin: 0 auto;
+  /* margin-top: 120px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(21 31 40 / 49%);
+  border-radius: 85px;
+  /* position: fixed; */
+  width: 600px;
 
   ul {
     display: flex;
@@ -192,7 +202,7 @@ body {
 
   /* Extra small devices (phones) */
   @media screen and (max-width: 575.98px) {
-    width: 100%;
+    width: 50%;
     border-radius: 0px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -201,8 +211,8 @@ body {
     background-color: navy;
 
     ul {
-      flex-direction: column;
-      align-items: flex-start;
+      // flex-direction: column;
+      // align-items: flex-start;
 
       .tab {
         margin-bottom: 10px;
@@ -214,7 +224,11 @@ body {
       display: flex;
       justify-content: flex-end;
       width: 100%;
+      .search {
+        margin-right: -3px;
+        margin-top: -17px;
     }
+  }
   }
 
   /* Small devices (tablets) */
@@ -238,47 +252,26 @@ body {
   // margin: 0 auto;
   display: none;
   justify-content: center;
-    align-items: center;
+  align-items: center;
 
-  .inputWrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .searchInput {
+    position: relative;
+
+    input {
+      padding: 20px;
+      border: none;
+      border-radius: 25px;
+      outline: none;
+      width: 450px;
+      box-sizing: border-box;
+    }
+
+    .searchButton {
+      position: absolute;
+      right: 18px;
+      margin-top: 15px;
+    }
   }
-
-  input {
-    padding: 20px;
-    border: none;
-    border-radius: 25px;
-    outline: none;
-    width: 450px;
-    box-sizing: border-box;
-  }
-
-  .advanceButton {
-  
-
-  }
-
-  .advanceButton:hover {
-    background-color: #fe690a;
-
-  }
-
-  button {
-    font-size: 16px;
-    position: absolute;
-    right: -151px;
-    top: 0;
-    background: none;
-    border: none;
-    padding: 19px 15px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    color: white;
-    font-family: serif;
-  }
-
   .close {
     margin-left: 6px;
   }
@@ -287,12 +280,13 @@ body {
 .platforms {
   list-style: none;
   padding: 1px;
-  box-shadow: darkslategray;
+  // box-shadow: darkslategray;
   margin: 0 auto;
   margin-top: 5px;
   align-items: center;
   justify-content: center;
-  background-color: #4a6166;
+  background: rgb(238,174,202);
+background: linear-gradient(90deg, rgb(238, 174, 202) 0%, rgb(0 18 48 / 18%) 0%);
   border-radius: 11px;
   /* position: fixed; */
   /* top: 29%; */
@@ -304,16 +298,16 @@ body {
 
   /* Extra small devices (phones) */
   @media screen and (max-width: 575.98px) {
-    width: 100%;
-    top: 33%;
-    padding: 10px;
+    // width: 400%;
+    // top: 33%;
+    // padding: 10px;
 
     .view {
       padding: 10px;
     }
 
     .products {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
@@ -353,7 +347,7 @@ body {
   .products {
     margin-left: 13px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .product {
@@ -373,9 +367,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #19292e;
+    background-color: #2c2d3cd4;
     padding: 10px;
     border-radius: 100%;
+  }
+  .imageShapeBackgroundFour{
+    background-color: #014054;
+
+  }
+  .imageShapeBackgroundTow{
+    background-color: #1890ff;
+
+  }
+  .imageShapeBackgroundThree{
+    background-color:#b96809;
+
+  }
+  .imageShapeBackgroundFive{
+    background-color: white;
+
   }
 }
 
@@ -386,14 +396,16 @@ body {
 
 .tab-content.active {
   display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .container {
 
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0;
+  // width: 1200px;
+  // margin: 0 auto;
+  // padding: 0;
 
   .trending {
     display: flex;
@@ -411,13 +423,13 @@ body {
   }
 
   .TrendingProducts {
-   display: grid;
-   grid-template-columns: repeat(3,1fr);
-   gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 
     .SingleTrending {
-    width: 350px;
-    padding: 16px;
+      width: 350px;
+      padding: 16px;
 
 
       .TrendingImage {
